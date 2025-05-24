@@ -21,15 +21,17 @@
 
 header {
     background-color: lightseagreen;
-    padding: 5rem;
+}
+
+header,
+main {
+    padding: 3rem 15%;
 }
 
 .profile-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .profile-photo {
@@ -60,4 +62,55 @@ header {
     padding: 30px;
     gap: 20px;
     font-size: 1.4rem;
+    min-width: 500px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.work-header{
+    grid-column: 1 / -1;
+}
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.project-screenshot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    min-height: 300px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-icons img {
+    min-width: 24px;
+    cursor: pointer;
 }
