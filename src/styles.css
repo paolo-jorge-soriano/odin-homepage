@@ -12,7 +12,7 @@
 
 :root {
     font-family: "PlayFair-Display", "sans-serif";
-    --max-width: 1400px;
+    --max-width: 1200px;
 }
 
 * {
@@ -22,11 +22,17 @@
 
 header {
     background-color: lightseagreen;
-    padding: 3rem; 
+    padding: 3rem;
 }
 
 main {
     padding: 3rem;
+}
+
+footer {
+    background-color: lightseagreen;
+    padding: 3rem;
+    font-family: "Roboto", "sans-serif";
 }
 
 .profile-container {
@@ -34,7 +40,6 @@ main {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    /* padding: 0 1.5rem; */
     max-width: var(--max-width);
 }
 
@@ -66,7 +71,6 @@ main {
     padding: 30px;
     gap: 20px;
     font-size: 1.4rem;
-    min-width: 500px;
 }
 
 .profile-icons {
@@ -76,6 +80,7 @@ main {
 }
 
 .profile-icons .icon {
+    cursor: pointer;
     width: 32px;
     height: 32px;
 }
@@ -83,13 +88,15 @@ main {
 .work-container {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     max-width: var(--max-width);
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
-.work-header{
+.work-header {
     grid-column: 1 / -1;
 }
 
@@ -104,7 +111,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-    min-height: 300px;
+    min-height: 200px;
 }
 
 .project-details {
@@ -132,17 +139,12 @@ main {
     cursor: pointer;
 }
 
-footer {
-    background-color: lightseagreen;
-    padding: 3rem;
-    font-family: "Roboto", "sans-serif";
-}
-
 .contact-container {
     display: flex;
     justify-content: space-between;
     max-width: var(--max-width);
     margin: 0 auto;
+    gap: 50px;
 }
 
 .contact-container h1 {
@@ -184,7 +186,38 @@ footer {
     width: 32px;
 }
 
+.contact-image {
+    display: flex;
+}
+
 .contact-image img {
-    min-width: 100%;
-    max-height: 450px;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* TABLET and MOBILE */
+@media (max-width: 850px) {
+
+    .profile-container,
+    .contact-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profile-container {
+        gap: 50px;
+    }
+
+    .contact-details h1 {
+        text-align: center;
+    }
+
+    .contact-icons {
+        justify-content: center;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+    }
 }
